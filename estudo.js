@@ -3,6 +3,9 @@
 // console.log("Eu estou no console.");
 let tabuada = 5;
 function alo(){
+    
+    let tabuada = document.getElementById("entrada").value;
+
     document.write("<h1>Tabuada do " + tabuada + "</h1>");
     document.write(tabuada + " x 1 = " + (tabuada*1)+"<br>");
     document.write(tabuada + " x 2 = " + (tabuada*2)+"<br>");
