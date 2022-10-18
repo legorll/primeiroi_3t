@@ -3,7 +3,7 @@
 // console.log("Eu estou no console.");
 let tabuada = 5;
 function alo(){
-
+    
     let tabuada = document.getElementById("entrada").value;
 
     document.write("<h1>Tabuada do " + tabuada + "</h1>");
@@ -33,18 +33,38 @@ function quadrado(){
         document.write("O quadrado de " + i + " é " + (i*i)+"<br>");
     }
 }
+
 function total(){
-     let val = document.getElementById("valor").value;
-     let ju = document.getElementById("juros").value;
-     let resultado = (val * ((ju/100)+1));
-     document.write("O total é de:" + resultado);
+    let val = document.getElementById("valor").value;
+    let ju = document.getElementById("juros").value;
+
+    if(Number(val)){
+        alert("O valor deve ser um número.")
+        document.getElementById("valor").velue = "";
+        document.getElementById("valor").focus();
+       return
+    }
+    if(Number(ju)){
+        alert("O juros deve ser um número.")
+        document.getElementById("juros").velue = "";
+        document.getElementById("juros").focus();
+       return
+    }
+
+    let resultado = (val * (ju/100)+1) + val;
+    document.write("O total é de: " + resultado);
+
 }
+// Para dividir usa  /
+// Calcular a média das 4 notas. Somas as 4 notas e divide por 4.
+// Quanto falta para passar. Pega 240  e subritai as notas
 
 function soma(){
     let n1 = document.getElementById("b1").value;
     let n2 = document.getElementById("b2").value;
     let n3 = document.getElementById("b3").value;
     let n4 = document.getElementById("b4").value;
-    let r = Number(n1) + Number(n2)  + Number(n3) + Number(n4);
+    let r = Number(n1) + Number(n2) + Number(n3) + Number(n4);
     document.getElementById("resultado").innerHTML = r;
+
 }
