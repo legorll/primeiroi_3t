@@ -13,3 +13,9 @@
     color: black;
     cursor: pointer;
 }
+.spResultado{
+    background: black;
+    color: yellow;
+    padding: 4px;
+    margin: 2px;
+}
